@@ -10,7 +10,7 @@ output:
 ```{r setup, include=FALSE}
 library(tidyverse)
 
-temp <- read.csv("~/Downloads/Mech List.csv")
+temp <- read.csv("Mech List.csv")
 
 clean <- temp |>
   arrange(Weight,Name)
