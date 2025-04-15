@@ -1,0 +1,39 @@
+---
+title: "Mechs"
+author: "By Yours Truly"
+date: "`r Sys.Date()`"
+output: 
+  prettydoc::html_pretty:
+    theme: leonids
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+
+temp <- read.csv("~/Downloads/Mech List.csv")
+
+clean <- temp |>
+  arrange(Weight,Name)
+
+IS_clean <- temp |>
+  filter(Faction=="Inner Sphere")|>
+  arrange(Weight,Name)
+
+Clan_clean <- temp |>
+  filter(Faction=="Clan")|>
+  arrange(Weight,Name)
+
+temp |>
+  mutate(Faction = as.factor(Faction))|>
+  ggplot(aes(y=Weight,x=Faction,color=Chassis))+
+  geom_boxplot()
+
+```
+## Inner Sphere Mechs
+```{r}
+DT::datatable(IS_clean)
+```
+## Clan Mechs
+```{r}
+DT::datatable(Clan_clean)
+```
