@@ -29,6 +29,11 @@ temp |>
   geom_boxplot()
 
 ```
+## All Mechs
+```{r}
+DT::datatable(clean)
+```
+
 ## Inner Sphere Mechs
 ```{r}
 DT::datatable(IS_clean)
@@ -37,3 +42,8 @@ DT::datatable(IS_clean)
 ```{r}
 DT::datatable(Clan_clean)
 ```
+## Charts and Graphs
+```{r}
+
+```
+
