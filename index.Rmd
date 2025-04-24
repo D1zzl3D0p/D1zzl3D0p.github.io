@@ -12,3 +12,4 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [Exam 3 link](Exam\ 3)
 [Mechhub](Mechhub)
+[Final Project](Final\ Project)
